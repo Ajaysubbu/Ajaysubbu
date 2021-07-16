@@ -1,0 +1,20 @@
+package com.testgroup.Artifacttest;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class test {
+	// WebDriver driver;
+	public static void main(String[] args) {
+		WebDriverManager.chromedriver().browserVersion("86.0.4240.183").setup();
+		WebDriver driver= new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://google.com");
+		driver.close();
+		driver.quit();
+
+	}
+
+}
